@@ -10,15 +10,15 @@ jobs:
       script: skip
       deploy: &heroku
         provider: heroku
-        app: sf-stages-staging
+        app: devops-advanced-demo
         api_key: $HEROKU_AUTH_TOKEN
         on: sf-stages-demo
     - stage: test staging
-      script: 'curl http://sf-stages-staging.herokuapp.com'
+      script: 'curl https://devops-advanced-demo.herokuapp.com'
     - stage: deploy to production
       script: /bin/true
       deploy:
         <<: *heroku
-        app: sf-stages-production
+        app: devops-demo-production
     - stage: test production
-      script: 'curl http://sf-stages-production.herokuapp.com'
+      script: 'curl http://devops-demo-production.herokuapp.com'
