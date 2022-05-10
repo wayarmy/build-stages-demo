@@ -1,5 +1,8 @@
 sudo: false
 
+before_deploy:
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
+
 jobs:
   include:
     - stage: unit tests
@@ -7,7 +10,6 @@ jobs:
     - stage: unit tests
       script: echo two
     - stage: deploy to staging
-      script: skip
       deploy: &heroku
         provider: heroku
         app: devops-advanced-demo
@@ -20,6 +22,5 @@ jobs:
       deploy:
         <<: *heroku
         app: devops-demo-production
-        on: master
     - stage: test production
       script: 'curl http://devops-demo-production.herokuapp.com'
