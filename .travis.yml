@@ -12,7 +12,7 @@ jobs:
         provider: heroku
         app: devops-advanced-demo
         api_key: $HEROKU_AUTH_TOKEN
-        on: sf-stages-demo
+        on: master
     - stage: test staging
       script: 'curl https://devops-advanced-demo.herokuapp.com'
     - stage: deploy to production
@@ -20,5 +20,6 @@ jobs:
       deploy:
         <<: *heroku
         app: devops-demo-production
+        on: master
     - stage: test production
       script: 'curl http://devops-demo-production.herokuapp.com'
