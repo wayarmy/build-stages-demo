@@ -11,6 +11,7 @@ jobs:
     - stage: unit tests
       script: echo two
     - stage: deploy to staging
+      script: skip
       deploy: &heroku
         provider: heroku
         app: devops-advanced-demo
