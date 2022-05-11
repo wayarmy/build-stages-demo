@@ -1,5 +1,8 @@
+require 'rubygems'
 require 'sinatra'
 
-get '/' do
-  "Hello, world, hahaha"
+class HelloWorldApp < Sinatra::Base
+  get '/' do
+    "Hello, world!"
+  end
 end
