@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 require './web'
+require 'coveralls'
 require 'test/unit'
 require 'rack/test'
+
+Coveralls.wear!
 
 set :environment, :test
 
@@ -17,6 +20,6 @@ class MyAppTest < Test::Unit::TestCase
   def test_hi_returns_hello_world
     get '/'
     assert last_response.ok?
-    assert_match /Xin chào/, last_response.body
+    assert_match 'Xin chào', last_response.body
   end
 end

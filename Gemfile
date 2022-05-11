@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
+gem 'coveralls', require: false
 gem 'puma'
 gem 'rack'
 gem 'rack-test'

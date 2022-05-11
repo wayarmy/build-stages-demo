@@ -1,5 +1,6 @@
-# Travis CI Build Stages Demo
+[![Coverage Status](https://coveralls.io/repos/github/wayarmy/build-stages-demo/badge.svg?branch=master)](https://coveralls.io/github/wayarmy/build-stages-demo?branch=master)
+[![Build Status](https://app.travis-ci.com/wayarmy/build-stages-demo.svg?branch=master)](https://app.travis-ci.com/wayarmy/build-stages-demo)
 
-This repository contains examples for Travis CI [Build Stages](https://docs.travis-ci.com/user/build-stages/) usecases. 
+# Devops Demo CI/CD
 
-Please refer to our documentation for an [overview of these examples](https://docs.travis-ci.com/user/build-stages/#Examples).
+This project is built for devops course demo
