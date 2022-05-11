@@ -3,13 +3,14 @@ sudo: false
 
 before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
+  - bundle install
 
 jobs:
   include:
     - stage: unit tests
       script: rubocop
     - stage: unit tests
-      script: echo two
+      script: bundle exec rake
     - stage: deploy to staging
       script: skip
       deploy: &heroku

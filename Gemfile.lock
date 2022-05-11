@@ -8,11 +8,14 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
+    power_assert (1.2.0)
     puma (5.6.4)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-protection (2.2.0)
       rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.4.0)
@@ -30,11 +33,16 @@ GEM
       parser (>= 3.1.1.0)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
+    rubytest (0.8.1)
     sinatra (2.2.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
       rack-protection (= 2.2.0)
       tilt (~> 2.0)
+    test (1.0.0)
+      rubytest
+    test-unit (3.3.7)
+      power_assert
     tilt (2.0.10)
     unicode-display_width (2.1.0)
 
@@ -45,9 +53,13 @@ PLATFORMS
 
 DEPENDENCIES
   puma
+  rack
+  rack-test
   rake
   rubocop
   sinatra
+  test
+  test-unit
 
 BUNDLED WITH
    2.3.13
