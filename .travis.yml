@@ -1,13 +1,18 @@
 dist: trusty
 sudo: false
+language: ruby
+cache: bundler
+rvm:
+- 2.4.1
 
 before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install rubocop
 
 jobs:
   include:
     - stage: unit tests
-      script: rubocop
+      script: bundle exec rubocop
     - stage: unit tests
       script: bundle exec rake
     - stage: deploy to staging
