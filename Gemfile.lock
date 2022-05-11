@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/grosser/parallel.git
+  revision: e7c4e02a245d5a1e0f8f8f18174f71f7a247dd36
+  ref: e7c4e02a245d5a1e0f8f8f18174f71f7a247dd36
+  specs:
+    parallel (1.22.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -5,10 +12,9 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
-    parallel (1.10)
     parser (3.1.2.0)
       ast (~> 2.4.1)
-    power_assert (1.2.0)
+    power_assert (2.0.1)
     puma (5.6.4)
       nio4r (~> 2.0)
     rack (2.2.3)
@@ -21,7 +27,7 @@ GEM
     regexp_parser (2.4.0)
     rexml (3.2.5)
     rubocop (1.12.1)
-      parallel (1.10)
+      parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
@@ -41,17 +47,16 @@ GEM
       tilt (~> 2.0)
     test (1.0.0)
       rubytest
-    test-unit (3.3.7)
+    test-unit (3.5.3)
       power_assert
     tilt (2.0.10)
     unicode-display_width (2.1.0)
 
 PLATFORMS
   arm64-darwin-20
-  ruby
-  x86_64-linux
 
 DEPENDENCIES
+  parallel!
   puma
   rack
   rack-test
