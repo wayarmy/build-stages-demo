@@ -17,6 +17,6 @@ class MyAppTest < Test::Unit::TestCase
   def test_hi_returns_hello_world
     get '/'
     assert last_response.ok?
-    assert_equal 'Hello, world!', last_response.body
+    assert_match /Xin chào/, last_response.body
   end
 end

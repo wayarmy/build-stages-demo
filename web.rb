@@ -4,5 +4,5 @@ require 'rubygems'
 require 'sinatra'
 
 get '/' do
-  'Hello, world!'
+  'Xin chào các anh em bạn bè đến từ BIDV technical deparment'
 end
