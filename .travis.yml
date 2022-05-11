@@ -7,7 +7,7 @@ before_deploy:
 jobs:
   include:
     - stage: unit tests
-      script: echo one
+      script: rubocop
     - stage: unit tests
       script: echo two
     - stage: deploy to staging
