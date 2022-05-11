@@ -7,6 +7,8 @@ rvm:
 
 before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
+
+before_install:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install rubocop
 
 jobs:
