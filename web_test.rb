@@ -20,6 +20,6 @@ class MyAppTest < Test::Unit::TestCase
   def test_hi_returns_hello_world
     get '/'
     assert last_response.ok?
-    assert_match 'Xin chào', last_response.body
+    assert_match 'Hello', last_response.body
   end
 end
