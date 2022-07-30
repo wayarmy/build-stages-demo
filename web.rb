@@ -4,5 +4,5 @@ require 'rubygems'
 require 'sinatra'
 
 get '/' do
-  'Hello các anh em bạn bè đang xem cái demo này!....'
+  'Hello các bạn đang tham gia workshop ngày hôm nay!...'
 end
